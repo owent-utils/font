@@ -21,7 +21,8 @@ parser.add_option("-o", "--output-file", action="store", help="output file path"
 parser.add_option("-i", "--italic", action="store_true", help="set font italic", dest="italic", default=False)
 parser.add_option("-u", "--underline", action="store_true", help="set font underline", dest="underline", default=False)
 parser.add_option("-b", "--bold", action="store_true", help="set font bold", dest="bold", default=False)
-parser.add_option("-r", "--vertical-spacing", action="store_true", help="set vertical spacing", metavar="<vertical spacing>", dest="vertical_spacing", default=5)
+parser.add_option("-r", "--vertical-spacing", action="store", help="set vertical spacing", metavar="<vertical spacing>", dest="vertical_spacing", type='int',default=5)
+parser.add_option("-m", "--smooth", action="store_true", help="set font smooth", dest="smooth", default=True)
 
 (options, left_args) = parser.parse_args()
 
@@ -58,7 +59,7 @@ if len(left_args) > 0:
 
         sum_height = sum_height + font.get_height() + options.vertical_spacing
 
-        ftext = font.render('Size=' + str(font_size) + ': ' + show_text, True, (int(front_color[0]), int(front_color[1]), int(front_color[2])), (int(back_color[0]), int(back_color[1]), int(back_color[2])))
+        ftext = font.render('Size=' + str(font_size) + ': ' + show_text, options.smooth, (int(front_color[0]), int(front_color[1]), int(front_color[2])), (int(back_color[0]), int(back_color[1]), int(back_color[2])))
         all_font_ftext.append(ftext)
         max_width = max(max_width, ftext.get_width())
 
