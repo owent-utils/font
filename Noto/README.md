@@ -14,6 +14,8 @@ License: Apache License, Version 2.0.
 ======
 Windows/Linux使用hinted字体包，macOS使用unhinted字体包。
 
+**[download_from_google.py](download_from_google.py)** 依赖python3,wget和unzip命令。用于从Google下载所有的思源字体，然后统一解压。
+
 英文
 ------
 + Noto Sans （无衬线字体）

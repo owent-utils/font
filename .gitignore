@@ -1,0 +1,9 @@
+/*.zip
+/*.tar.*
+
+/Noto/*.zip
+/Noto/*/*.zip
+/Noto/*/*.txt
+/Noto/*/*.ttf
+/Noto/*/*.otf
+/Noto/*/README
