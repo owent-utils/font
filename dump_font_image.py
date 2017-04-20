@@ -42,7 +42,7 @@ if len(left_args) > 0:
     if len(all_size) == 0:
         all_size = [9, 12, 14, 16, 18, 22, 24, 28, 32, 36, 72, 96, 128]
 
-    show_text = ' '.join(left_args).decode(console_encoding)
+    show_text = ' '.join(left_args)
     all_font_ftext = []
     sum_height = 0
     max_width = 0
